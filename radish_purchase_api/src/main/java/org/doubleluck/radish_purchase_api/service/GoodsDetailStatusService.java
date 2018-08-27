@@ -1,6 +1,6 @@
 package org.doubleluck.radish_purchase_api.service;
 
-import org.doubleluck.radish_purchase_api.model.po.GoodsStatus;
+import org.doubleluck.radish_purchase_api.model.po.GoodsDetailStatus;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -8,16 +8,16 @@ import java.util.List;
 public interface GoodsDetailStatusService {
 
     @Transactional
-    void create(GoodsStatus goodsStatus);
+    void create(GoodsDetailStatus goodsDetailStatus);
 
     @Transactional
-    void update(GoodsStatus goodsStatus);
+    void update(GoodsDetailStatus goodsDetailStatus);
 
     @Transactional
     void remove(Long id);
 
-    GoodsStatus findById(Long id);
+    GoodsDetailStatus findById(Long id);
 
-    List<GoodsStatus> findAll();
+    List<GoodsDetailStatus> findAll();
 
 }

@@ -1,7 +1,14 @@
 package org.doubleluck.radish_purchase_api.model.po;
 
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import java.util.Date;
 
+@Builder
+@ToString
+@NoArgsConstructor
 public class GoodsPicRel {
     /**
      *
