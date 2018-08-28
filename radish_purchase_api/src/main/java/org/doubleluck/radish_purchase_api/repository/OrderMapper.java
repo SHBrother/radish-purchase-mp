@@ -14,6 +14,7 @@ import org.apache.ibatis.annotations.SelectProvider;
 import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.annotations.UpdateProvider;
 import org.apache.ibatis.type.JdbcType;
+import org.doubleluck.radish_purchase_api.annotation.CheckLogicDelete;
 import org.doubleluck.radish_purchase_api.model.example.OrderExample;
 import org.doubleluck.radish_purchase_api.model.po.Order;
 
@@ -90,6 +91,7 @@ public interface OrderMapper {
         @Result(column="created_at", property="createdAt", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="delete_flag", property="deleteFlag", jdbcType=JdbcType.TINYINT)
     })
+    @CheckLogicDelete
     List<Order> selectByExample(OrderExample example);
 
     /**
