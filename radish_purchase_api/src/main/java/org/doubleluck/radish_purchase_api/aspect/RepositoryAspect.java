@@ -26,7 +26,7 @@ public class RepositoryAspect {
         if (args != null && args.length > 0) {
             SupportLogicDelete example = (SupportLogicDelete) args[0];
             if (example != null) {
-                example.setDeleteFlagFalse();
+                example.setDeleteFlagTrue();
             } else {
                 throw new RepositoryException("Query Example is null , cannot filter logic delete");
             }
@@ -35,7 +35,7 @@ public class RepositoryAspect {
 
     @SuppressWarnings("unused")
 //    @Around("repositoryPoint()")
-    public Object handleException(ProceedingJoinPoint joinPoint) throws RepositoryException {
+    public Object handleException(ProceedingJoinPoint joinPoint) {
         log.info("{}.{}", joinPoint.getTarget(), joinPoint.getSignature());
         try {
             return joinPoint.proceed();

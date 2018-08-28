@@ -43,7 +43,7 @@ public class GoodsClassifyController {
         return new RestApiResultImpl(goodsClassify);
     }
 
-    @GetMapping("")
+    @GetMapping("/list")
     public RestApiResult findAll() {
         List<GoodsClassify> goodsClassifies = goodsClassifyService.findAll();
         return new RestApiResultImpl(goodsClassifies);
